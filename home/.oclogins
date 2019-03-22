@@ -1,0 +1,32 @@
+#!/bin/bash
+
+oclogin() {
+  get_pw
+  oc login $1:8443 -u=$USER -p=$SSPW --insecure-skip-tls-verify
+  echo ""
+  echo "Logged into: $1"
+  echo "Logged in user: $USER"
+  echo ""
+}
+
+lab() {
+  oclogin platform.eps-lab.corp.cox.com
+}
+misnp() {
+  oclogin platform.eps-nonprd.corp.cox.com
+}
+mis() {
+  oclogin platform.eps.corp.cox.com
+}
+sdcnp() {
+  oclogin platform.eps-nonprd.cox.com
+}
+sdc() {
+  oclogin platform.eps.cox.com
+}
+risea() {
+  oclogin platform.epsa.cloud.cox.com
+}
+riseb() {
+  oclogin platform.epsb.cloud.cox.com
+}

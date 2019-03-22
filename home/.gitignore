@@ -1,0 +1,25 @@
+# Compiled Python files
+*.pyc
+
+*.log
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Misc
+home/.config
+!home/.config/karabiner
+
+id_rsa
+id_rsa.pub
+known_hosts
+*.pem

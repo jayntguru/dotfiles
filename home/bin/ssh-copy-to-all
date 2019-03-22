@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+## Work in progress, not ready for use yet...
+
+#!/bin/bash
+#for ip in `cat ~/dev/server-list.txt`; do
+for ip in `grep -E '^.*HostName (.*)$' ~/.ssh/config | awk '{print $2}'`; do
+    #ssh-copy-id -i ~/.ssh/id_rsa.pub $ip
+    echo "test: $ip"
+done
